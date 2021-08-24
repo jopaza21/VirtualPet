@@ -2,6 +2,7 @@ void setup(){
   size(400,400);
 }
 void draw(){
+  background(135,255,0);
   noStroke();
   //body
   fill(52,116,0);
