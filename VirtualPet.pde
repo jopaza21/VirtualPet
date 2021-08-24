@@ -17,6 +17,9 @@ void draw(){
   triangle(185,200,155,200,170,220);
   triangle(215,200,245,200,230,220);
   
+  ellipse(170,185,30,20);
+  ellipse(230,185,30,20);
+  
   //eyes
   fill(255,255,255);
   ellipse(170,120,30,30);
@@ -29,4 +32,5 @@ void draw(){
   fill(0,0,0);
   arc(200,150,20,20,0,PI);
   
+  //fyi mr chan i'm not an artist :D
 }
