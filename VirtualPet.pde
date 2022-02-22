@@ -1,32 +1,37 @@
-public int size = 300;
-
-public void setup() {
+void setup(){
   size(400,400);
-  background(0);
 }
-
-public void draw() {
-  //noStroke();
-  sierpinski(50,350,300);
-}
-
-public void keyPressed() {
-  if(key == 'w' && size >= 10) {
-    size /= 2;
-  }
-  if(key == 's' && size <= 200) {
-    size *= 2;
-  }
-}
-
-public void sierpinski(int x, int y, int len) {
-  fill((int)(Math.random()*255));
-  if(len < size) {
-    triangle(x, y, x+len, y, x+len/2, y-len);
-  }
-  else {
-    sierpinski(x, y, len/2);
-    sierpinski(x+len/2, y, len/2);
-    sierpinski(x+len/4, y-len/2, len/2);
-  }  
+void draw(){
+  background(135,255,0);
+  noStroke();
+  //body
+  fill(52,116,0);
+  ellipse(200,185,60,60);
+  fill(52,170,0);
+  ellipse(200,185,40,40);
+  
+  fill(52,116,0);
+  ellipse(200,150,100,75);
+  ellipse(170,120,45,45);
+  ellipse(230,120,45,45);
+  
+  triangle(185,200,155,200,170,220);
+  triangle(215,200,245,200,230,220);
+  
+  ellipse(170,185,30,20);
+  ellipse(230,185,30,20);
+  
+  //eyes
+  fill(255,255,255);
+  ellipse(170,120,30,30);
+  ellipse(230,120,30,30);
+  fill(0,0,0);
+  ellipse(170,120,20,20);
+  ellipse(230,120,20,20);
+  
+  //smile
+  fill(0,0,0);
+  arc(200,150,20,20,0,PI);
+  
+  //fyi mr chan i'm not an artist :D
 }
